@@ -2,7 +2,7 @@ package com.example.feign.controller;
 
 import com.example.common.dto.Use;
 import com.example.feign.service.HelloService;
-import com.example.feign.service.RefactorHelloService;
+import com.example.feign.service.RefactorHelloServiceApi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,7 +19,7 @@ public class ConsumerController {
     private HelloService helloService;
 
     @Autowired
-    private RefactorHelloService refactorHelloService;
+    private RefactorHelloServiceApi refactorHelloService;
 
     @RequestMapping(method = RequestMethod.GET, path = "/feign-consumer")
     public String helloConsumer() {

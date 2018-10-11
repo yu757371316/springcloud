@@ -23,7 +23,7 @@ public class HelloService {
 
     @HystrixCommand(fallbackMethod = "helloFallback",
             commandProperties = {
-                    @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")
+                    @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1500")
             })
     //同步执行的实现
     public String helloService(int id) {
@@ -37,7 +37,7 @@ public class HelloService {
     @CacheResult
     @HystrixCommand(fallbackMethod = "helloFallback",
             commandProperties = {
-                    @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")
+                    @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1500")
             })
     //同步执行的实现
     public String helloServiceSync(@CacheKey("id") int id) {

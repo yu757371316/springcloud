@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
  * @date : 2018/9/28 17:23
  */
 @RequestMapping("/refactor")
-public interface HelloService {
+public interface HelloServiceApi {
 
     @RequestMapping(value = "/hello4", method = RequestMethod.GET)
     String hello(@RequestParam("name") String name);

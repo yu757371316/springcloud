@@ -1,7 +1,7 @@
 package com.example.provider.rest;
 
 import com.example.common.dto.Use;
-import com.example.common.service.HelloService;
+import com.example.common.service.HelloServiceApi;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
  * @date : 2018/9/28 17:26
  */
 @RestController
-public class RefactorHelloController implements HelloService {
+public class RefactorHelloControllerApi implements HelloServiceApi {
 
     @Override
     public String hello(@RequestParam("name") String name)  {
